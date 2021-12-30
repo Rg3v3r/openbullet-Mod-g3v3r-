@@ -1,4 +1,6 @@
 # OpenBullet
+OpenBullet 1 has reached the end of its life, no more support will be provided for it. Please consider switching to OpenBullet 2 as it will be kept up to date and offers a lot more features.
+
 [![Build status](https://ci.appveyor.com/api/projects/status/ubdcnn38uanaoqic?svg=true)](https://ci.appveyor.com/project/openbullet/openbullet)
 
 **OpenBullet needs YOUR help to stay alive!** https://forum.openbullet.dev/topic/505/openbullet-crowdfunding
@@ -13,13 +15,13 @@ OpenBullet is a webtesting suite that allows to perform requests towards a targe
 
 **IMPORTANT!** Performing (D)DoS attacks or credential stuffing on sites you do not own (or you do not have permission to test) is **illegal!** The developer will not be held responsible for improper use of this software.
 
-![Runner](https://i.imgur.com/vb8OUfr.jpg)
+![Runner](https://i.ibb.co/L5psd79/Openbullet.png)
 
 [Here](https://openbullet.github.io) you can find the complete documentation for **usage**, **config making** and the **RuriLib API**.
 
 The **OpenBullet API** was released. It can be used to host configs remotely on your server and have OpenBullet download them upon Rescan. It's very useful to always have updated configs between different computers or people. You can learn more about it [here](https://openbullet.github.io/remote.html).
 
-Found a bug? [Create an issue!](https://help.github.com/en/articles/creating-an-issue)
+
 
 # How to build
 0. Make sure you have installed the .NET framework (dev) 4.7.2.
@@ -33,10 +35,7 @@ This software is licensed under the MIT License.
 
 # Donate
 If you like this software, consider making a donation to the developer. Thank you!
-- BTC: **39yMkox6pP8tnSC7rZ5EM4nUUHgPbg1fKM**
+- BTC: ************************
 
 # Credits
-I want to thank all the community for their inputs that shaped OpenBullet into what it is now, and my gratitude goes towards **demiurgo** and **meinname**, who spent a lot of time helping me test and debug the Beta builds.
-
-# Contact
-I am not on discord / telegram, anyone on there who claims to be me is a fake. If you need to contact me for any reason you can send me an email here: `ruri [at] openbullet (dot) dev`. I don't check it very often so be patient please.
+I want to thank all the community for their inputs that shaped OpenBullet.
