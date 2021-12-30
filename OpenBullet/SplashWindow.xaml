@@ -1,0 +1,40 @@
+﻿<Window x:Class="OpenBullet.SplashWindow" Title="SplashWindow" Height="390.714" Width="750" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="{DynamicResource BackgroundMain}" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:OpenBullet" MouseDown="WindowMouseDown">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="37.321" />
+            <ColumnDefinition Width="358.679" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <TextBlock TextBlock.TextAlignment="Center" TextBlock.FontSize="10" Margin="20,367,334,390" Grid.ColumnSpan="3">
+      <Span Foreground="{DynamicResource ForegroundBad}">
+        <Bold Foreground="#FFF7EEED">ATTENTION!</Bold>
+      </Span> <Span Foreground="#FFF16A63">Respects to Ruri and Forlax for first developing BB and OB<LineBreak /></Span></TextBlock>
+        <StackPanel Grid.Column="2" Margin="5,5,5,0" Height="365" VerticalAlignment="Top" Grid.RowSpan="2">
+            <Image Name="quitImage" Source="/Images/Icons/quit.png" Width="15" Height="15" HorizontalAlignment="Right" Margin="3" MouseDown="quitImage_MouseDown" />
+            <Image Source="/OBIcon2.png" Margin="20,-10,19,20" Height="95" Width="312" />
+            <Label Content="▄︻デ 𝔅𝔦𝔢𝔫𝔳𝔢𝔫𝔦𝔡𝔬 ══━一" HorizontalAlignment="Center" FontWeight="Bold" Margin="0 -10 0 0" Width="180" FontSize="16" />
+            <Label Content="𝕺𝖕𝖊𝖓𝕭𝖚𝖑𝖑𝖊𝖙 𝕲3𝖛3𝖗" HorizontalAlignment="Center" FontSize="11" Margin="0 -5 0 0" Foreground="#FF059305" />
+            <!--<Label Content="𝕸𝖔𝖉" HorizontalAlignment="Center" FontSize="11" Margin="0 -10 0 0" />-->
+            <Grid Margin="0 10 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+            </Grid>
+            <DockPanel>
+                <Button Name="loginButton_Copy" Content="ℑ𝔫𝔦𝔠𝔦𝔞𝔯" Width="111" Click="agreeButton_Click" Foreground="#FF059305" />
+            </DockPanel>
+            <Label Name="resultLabel" HorizontalAlignment="Center" Margin="0 3 0 0" Foreground="#FF3AFF00">
+                <Button Name="UpdateButton" Content="𝔖𝔞𝔩𝔦𝔯" Click="Update" Width="90" Foreground="#FF4ED021" />
+            </Label>
+            <TextBox Name="ChangeLogBox" Height="106" TextWrapping="Wrap" Text="Openbullet Mod by_g3v3r es una suite de pruebas web que permite realizar solicitudes hacia una aplicación web objetivo y ofrece muchas herramientas para trabajar con los resultados. Este software se puede utilizar para raspar y analizar datos , pentesting automatizado y más." Margin="20,0,19,0" VerticalAlignment="Top" TextAlignment="Left" TextChanged="TextBox_TextChanged" Foreground="#FF4ED021" />
+        </StackPanel>
+        <Label Content="1.2.5 " VerticalAlignment="Stretch" Margin="0,-5,314,770" Grid.ColumnSpan="2" />
+        <Image Source="Logo 3 Reapers g3v3r.png" Margin="0,-5,0,542" Grid.ColumnSpan="2" />
+        <Button Content="▄︻デ  ══━一" Margin="64,317,64,583" Grid.Column="1" Click="Button_Click" />
+    </Grid>
+</Window>

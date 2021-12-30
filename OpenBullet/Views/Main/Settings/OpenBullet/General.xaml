@@ -1,0 +1,59 @@
+﻿<Page x:Class="OpenBullet.Views.Main.Settings.OpenBullet.General"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:OpenBullet.Views.Main.Settings.OpenBullet"
+      xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="OBSettingsGeneral">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0">
+            <CheckBox Content="Mostrar LoliScript" IsChecked="{Binding DisplayLoliScriptOnLoad}" VerticalContentAlignment="Center" ToolTip="Click if you want the default view in Stacker to be LoliScript code"/>
+            <CheckBox Content="Configurar bots automaticamente" IsChecked="{Binding RecommendedBots}" VerticalContentAlignment="Center"/>
+            <CheckBox Content="Cambiar interfa(Reinicio)" IsChecked="{Binding ChangeRunnerInterface}" VerticalContentAlignment="Center" ToolTip="Whether to swap the log and the hits list in the UI" />
+            <CheckBox Content="Desactivar advertencia al salir" IsChecked="{Binding DisableQuitWarning}" VerticalContentAlignment="Center"/>
+            <CheckBox Content="advertencia configuración no guardada" IsChecked="{Binding DisableNotSavedWarning}" VerticalContentAlignment="Center"/>
+            <CheckBox Content="Permitir la edición de Live Config" IsChecked="{Binding LiveConfigUpdates}" VerticalAlignment="Center" VerticalContentAlignment="Center" />
+            <CheckBox Content="Deshabilitar la vista HTML" IsChecked="{Binding DisableHTMLView}" VerticalAlignment="Center" VerticalContentAlignment="Center" />
+            <CheckBox Content="Siempre en la cima" IsChecked="{Binding AlwaysOnTop}" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+            <CheckBox Content="Crea automáticamente al inicio" IsChecked="{Binding AutoCreateRunner}" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+            <CheckBox Content="Persistir el registro del depurador" IsChecked="{Binding PersistDebuggerLog}" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+            <CheckBox Content="Deshabilitar el asistente de sintaxis" IsChecked="{Binding DisableSyntaxHelper}" VerticalAlignment="Center" VerticalContentAlignment="Center" />
+            <CheckBox Content="Mostrar ultimas capturas en el depurador" IsChecked="{Binding DisplayCapturesLast}" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+            <CheckBox Content="copia de seguridad base datos diariamente" IsChecked="{Binding BackupDB}" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1">
+            <DockPanel Margin="5">
+                <Label Content="Nombre autor:"/>
+                <TextBox Text="{Binding DefaultAuthor}" />
+            </DockPanel>
+            <DockPanel DockPanel.Dock="Top">
+                <Label Content="Starting Window Width" />
+                <xctk:IntegerUpDown Background="Transparent" Width="70" Margin="10 0 0 0" Minimum="800" Maximum="10000" Value="{Binding StartingWidth}" Foreground="{DynamicResource ForegroundMain}"  HorizontalAlignment="Right" />
+            </DockPanel>
+            <DockPanel DockPanel.Dock="Top">
+                <Label Content="Starting Window Height" />
+                <xctk:IntegerUpDown Background="Transparent" Width="70" Margin="10 0 0 0" Minimum="600" Maximum="10000" Value="{Binding StartingHeight}" Foreground="{DynamicResource ForegroundMain}"  HorizontalAlignment="Right" />
+            </DockPanel>
+            <CheckBox Content="Disable Ctrl+C/V on Blocks" IsChecked="{Binding DisableCopyPasteBlocks}" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label Content="Program Log:" FontWeight="Bold"/>
+            <CheckBox Content="Enable Logging" IsChecked="{Binding EnableLogging}" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+            <CheckBox Content="Log to file (CARE: gets cleared on start)" IsChecked="{Binding LogToFile}" VerticalContentAlignment="Center" VerticalAlignment="Center"/>
+            <DockPanel DockPanel.Dock="Top">
+                <Label Content="Log Buffer Size" />
+                <xctk:IntegerUpDown Background="Transparent" Width="70" Margin="10 0 0 0" Minimum="10" Maximum="100000" Value="{Binding LogBufferSize}" Foreground="{DynamicResource ForegroundMain}"  HorizontalAlignment="Right" />
+            </DockPanel>
+            <CheckBox Content="Ignore Wordlist name on hits dedupe" IsChecked="{Binding IgnoreWordlistOnHitDedupe}" VerticalContentAlignment="Center" VerticalAlignment="Center" />
+        </StackPanel>
+    </Grid>
+</Page>

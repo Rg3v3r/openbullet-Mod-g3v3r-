@@ -1,0 +1,49 @@
+﻿<Page x:Class="OpenBullet.Views.Main.Tools.ListGenerator"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:OpenBullet.Views.Main.Tools"
+      mc:Ignorable="d" 
+      d:DesignHeight="480" d:DesignWidth="780"
+      Title="ToolsListGenerator">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Margin="5">
+            <DockPanel>
+                <Label DockPanel.Dock="Top" Content="Mascara" />
+                <TextBox DockPanel.Dock="Top" Text="{Binding Mask, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <Label DockPanel.Dock="Top" Content="Caracteres permitidos" />
+                <TextBox DockPanel.Dock="Top" Text="{Binding AllowedCharacters, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+                    <Button x:Name="clearButton" Content="Limpiar" Click="clearButton_Click" />
+                    <Button x:Name="digitsButton" Content="Digitos" Click="digitsButton_Click" />
+                    <Button x:Name="lowercaseButton" Content="Minuscula" Click="lowercaseButton_Click" />
+                    <Button x:Name="uppercaseButton" Content="Mayuscula" Click="uppercaseButton_Click" />
+                </StackPanel>
+                <CheckBox DockPanel.Dock="Top" Content="Salida solo números válidos de Luhn" IsChecked="{Binding OnlyLuhn}" VerticalContentAlignment="Center"/>
+                <CheckBox DockPanel.Dock="Top" Content="Agregar automáticamente al Administrador de listas de palabras" IsChecked="{Binding AutoImport}" VerticalContentAlignment="Center"/>
+                <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+                    <Label Content="Numero esperado de líneas:" />
+                    <Label Content="{Binding OutputLines}" />
+                </StackPanel>
+                <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+                    <Label Content="Tamaño de archivo esperado:" />
+                    <Label Content="{Binding OutputSize}" />
+                </StackPanel>
+
+                <Button DockPanel.Dock="Top" x:Name="generateButton" Click="generateButton_Click" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Images/Icons/gears.png" Width="20" />
+                        <TextBlock VerticalAlignment="Center" Margin="5 0">Generar</TextBlock>
+                    </StackPanel>
+                </Button>
+            </DockPanel>
+        </StackPanel>
+    </Grid>
+</Page>
