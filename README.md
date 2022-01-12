@@ -3,7 +3,6 @@ OpenBullet 1 has reached the end of its life, no more support will be provided f
 
 [![Build status](https://ci.appveyor.com/api/projects/status/ubdcnn38uanaoqic?svg=true)](https://ci.appveyor.com/project/openbullet/openbullet)
 
-**OpenBullet needs YOUR help to stay alive!** https://forum.openbullet.dev/topic/505/openbullet-crowdfunding
 
 Link to the [Official Forum](https://forum.openbullet.dev/)
 
@@ -33,9 +32,6 @@ The **OpenBullet API** was released. It can be used to host configs remotely on 
 # License
 This software is licensed under the MIT License.
 
-# Donate
-If you like this software, consider making a donation to the developer. Thank you!
-- BTC: ************************
 
 # Credits
 I want to thank all the community for their inputs that shaped OpenBullet.

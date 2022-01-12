@@ -188,10 +188,10 @@ namespace OpenBullet
                     string responseStr = response4.Content.ReadAsStringAsync().Result;
 
 
-                    string ok = $"SERVER OK👍 {Environment.NewLine}";
+                    string ok = $"👍 {Environment.NewLine}";
 
 
-                    url.AppendText(ok);
+                    textBoxServer.AppendText(ok);
 
 
 
@@ -199,10 +199,10 @@ namespace OpenBullet
                 }
                 else
                 {
-                    string nou = $"TU SERVER NO VA 👎 { Environment.NewLine}";
+                    string nou = $"👎 { Environment.NewLine}";
 
 
-                    url.AppendText(nou);
+                    textBoxServer.AppendText(nou);
 
 
 
@@ -222,6 +222,28 @@ namespace OpenBullet
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //HttpResponseMessage response;
+
+            //HttpClient client;
+            //client = new HttpClient();
+            //string currenTime = DateTime.Now.ToString("dd/MM/yyyy");
+            //var url2 = "http://iptvhit.com/freeiptv?";
+            //response = client.GetAsync(url2 + currenTime).Result;
+
+
+            //string responseStr = response.Content.ReadAsStringAsync().Result;
+
+            //Regex rx = new Regex("color:white\">(.*?)/get.php", RegexOptions.Singleline);
+
+            //foreach (Match match in rx.Matches(responseStr))
+            //{
+
+
+            //    var url = match.Groups[1];
+
+            //    txtBoxResultado.Text += url + Environment.NewLine;
+
+            //}
             HttpResponseMessage response;
 
             HttpClient client;
@@ -234,11 +256,85 @@ namespace OpenBullet
             string responseStr = response.Content.ReadAsStringAsync().Result;
 
             Regex rx = new Regex("color:white\">(.*?)/get.php", RegexOptions.Singleline);
-            foreach (var match in rx.Matches(responseStr))
-            {
-                var url = match;
 
-                txtBoxResultado.Text += url + "\n";
+            foreach (Match match in rx.Matches(responseStr))
+            {
+
+
+                var url = match.Groups[1];
+
+                txtBoxR1.Text += url + Environment.NewLine;
+
+            }
+            HttpResponseMessage response2;
+            string currenTime2 = DateTime.Now.AddDays(-1).ToString("dd/MM/yyyy");
+            //HttpClient client;
+            client = new HttpClient();
+
+            var url3 = "http://iptvhit.com/freeiptv?";
+
+
+            response2 = client.GetAsync(url3 + currenTime2).Result;
+            string responseStr2 = response2.Content.ReadAsStringAsync().Result;
+
+            Regex rx2 = new Regex("color:white\">(.*?)/get.php", RegexOptions.Singleline);
+
+            foreach (Match match in rx2.Matches(responseStr2))
+            {
+
+
+                var urlb2 = match.Groups[1];
+
+                txtBoxR1.Text += urlb2 + Environment.NewLine;
+
+            }
+            string currenTime3 = DateTime.Now.AddDays(-2).ToString("dd/MM/yyyy");
+            HttpResponseMessage response3;
+
+            //HttpClient client;
+            client = new HttpClient();
+
+            var url4 = "http://iptvhit.com/freeiptv?";
+
+            response3 = client.GetAsync(url4 + currenTime3).Result;
+
+            string responseStr3 = response3.Content.ReadAsStringAsync().Result;
+
+            Regex rx3 = new Regex("color:white\">(.*?)/get.php", RegexOptions.Singleline);
+
+            foreach (Match match in rx3.Matches(responseStr3))
+            {
+
+
+                var urlb3 = match.Groups[1];
+
+                txtBoxR1.Text += urlb3 + Environment.NewLine;
+
+
+            }
+            string currenTime4 = DateTime.Now.AddDays(-3).ToString("dd/MM/yyyy");
+            //HttpResponseMessage response3;
+
+            //HttpClient client;
+            client = new HttpClient();
+
+            var url5 = "http://iptvhit.com/freeiptv?";
+
+            response3 = client.GetAsync(url5 + currenTime4).Result;
+
+            string responseStr4 = response3.Content.ReadAsStringAsync().Result;
+
+            Regex rx4 = new Regex("color:white\">(.*?)/get.php", RegexOptions.Singleline);
+
+            foreach (Match match in rx3.Matches(responseStr3))
+            {
+
+
+                var url25 = match.Groups[1];
+
+                txtBoxR1.Text += url25 + Environment.NewLine;
+
+
             }
         }
 
@@ -257,6 +353,137 @@ namespace OpenBullet
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            HttpResponseMessage responses1;
+
+            HttpClient client;
+            client = new HttpClient();
+            string Time = DateTime.Now.ToString("yyyy/MM");
+            string sobra = "/stbemu-codes-stalker-portal-mac-4.html";
+            var urlMAC = "https://iptvlinkseuro.blogspot.com/";
+            responses1 = client.GetAsync(urlMAC + Time + sobra).Result;
+
+
+            string responseStr = responses1.Content.ReadAsStringAsync().Result;
+            Regex rxs1 = new Regex("http://(.*?)/c(.*?)", RegexOptions.Multiline);
+            //Regex rxs1 = new Regex("http://(.*?)<br(.*?)", RegexOptions.Multiline);
+
+            foreach (Match match in rxs1.Matches(responseStr))
+            {
+
+
+                var urls1 = match.Groups[0];
+
+                txtBoxR1.Text += urls1 + Environment.NewLine;
+
+            }
+            HttpResponseMessage responses2;
+            var urlMac2 = "https://iptvlinkseuro.blogspot.com/2021/12/stbemu-codes-stalker-portal-mac-1.html";
+
+            responses2 = client.GetAsync(urlMac2 + Time + sobra).Result;
+
+
+            string responseStr2 = responses2.Content.ReadAsStringAsync().Result;
+            Regex rxs2 = new Regex("http://(.*?)/c(.*?)", RegexOptions.Multiline);
+            //Regex rxs1 = new Regex("http://(.*?)<br(.*?)", RegexOptions.Multiline);
+
+            foreach (Match match in rxs2.Matches(responseStr))
+            {
+
+
+                var urls2 = match.Groups[0];
+
+                txtBoxR1.Text += urls2 + Environment.NewLine;
+
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            HttpResponseMessage responsec2;
+
+            HttpClient client;
+            client = new HttpClient();
+
+            var urlCodeiptv = "https://iptvrun.com/xtream-codes-04-01-2022/";
+            responsec2 = client.GetAsync(urlCodeiptv).Result;
+
+
+            string responseStrCodeiptv = responsec2.Content.ReadAsStringAsync().Result;
+            Regex rxc1 = new Regex("URL(.*?)Xtream Codes(.*?)", RegexOptions.Singleline);
+            //Regex rxs1 = new Regex("http://(.*?)<br(.*?)", RegexOptions.Multiline);
+
+            foreach (Match match in rxc1.Matches(responseStrCodeiptv))
+            {
+
+
+                var urlc1 = match.Groups[1];
+
+                txtBoxR2.Text += urlc1 + Environment.NewLine;
+
+            }
+        }
+
+        private void textBoxServer_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            HttpResponseMessage responseC1;
+
+            HttpClient client;
+            client = new HttpClient();
+            //string Time = DateTime.Now.ToString("yyyy/MM");
+            //string sobra = "/stbemu-codes-stalker-portal-mac-4.html";
+            //https://iptvlinkseuro.blogspot.com/2021/01/stbemu-codes-stalker-portal-mac-1.html
+            var urlMAC = "https://iptvlinkseuro.blogspot.com/2021/12/stbemu-codes-stalker-portal-mac-1.html";
+            responseC1 = client.GetAsync(urlMAC).Result;
+
+
+            string responseStr = responseC1.Content.ReadAsStringAsync().Result;
+            Regex rxs1 = new Regex("http://(.*?)MAC(.*?)", RegexOptions.Multiline);
+            //Regex rxs1 = new Regex("http://(.*?)<br(.*?)", RegexOptions.Multiline);URL(.*?)Xtream Codes(.*?)
+
+            foreach (Match match in rxs1.Matches(responseStr))
+            {
+
+
+                var urls1 = match.Groups[1];
+
+                txtBoxR2.Text += urls1 + Environment.NewLine;
+
+            }
+            //HttpResponseMessage responseC1;
+
+            //HttpClient client;
+            client = new HttpClient();
+            //string Time = DateTime.Now.ToString("yyyy/MM");
+            //string sobra = "/stbemu-codes-stalker-portal-mac-4.html";
+            //https://iptvlinkseuro.blogspot.com/2021/01/stbemu-codes-stalker-portal-mac-1.html
+            var urlMAC2 = "https://iptvlinkseuro.blogspot.com/2021/01/stbemu-codes-stalker-portal-mac-1.html";
+            responseC1 = client.GetAsync(urlMAC2).Result;
+
+
+            string responseStr2 = responseC1.Content.ReadAsStringAsync().Result;
+            Regex rxs2 = new Regex("http://(.*?)MAC(.*?)", RegexOptions.Multiline);
+            //Regex rxs1 = new Regex("http://(.*?)<br(.*?)", RegexOptions.Multiline);URL(.*?)Xtream Codes(.*?)
+
+            foreach (Match match in rxs1.Matches(responseStr))
+            {
+
+
+                var urls2 = match.Groups[1];
+
+                txtBoxR2.Text += urls2 + Environment.NewLine;
+
+            }
         }
     }
 }

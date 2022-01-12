@@ -1007,8 +1007,6 @@
     <Resource Include="Images\Icons\stack.png" />
     <Resource Include="Images\Icons\git.png" />
     <Resource Include="Images\Icons\retry.png" />
-    <Resource Include="Images\logo.png" />
-    <Resource Include="Images\logoinverted.png" />
     <Resource Include="Logo 3 Reapers g3v3r.png" />
     <Resource Include="logo.ico" />
     <Resource Include="log0.ico" />
